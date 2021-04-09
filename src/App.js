@@ -1,5 +1,6 @@
 import {useState} from "react";
 import './App.css';
+import Image from "./assets/timerImage.svg";
 
 function App() {
   const [currentTime,setCurrenttime] = useState(false);
@@ -11,7 +12,7 @@ function App() {
   setInterval(updateTime,1000);
   return (
     <div className="App">
-    <img src="./assets/timerImage.svg" alt="timer image"/>
+    <img src={Image} alt="timer image"/>
       <h1>{currentTime}</h1>
     </div>
   );
